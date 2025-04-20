@@ -1,5 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Header from '../components/Header'
+import Footer from '../components/Footer';
+
 
 //V-309,paso 2.3, creamos el layout
 export default function Layout() {
@@ -10,13 +12,14 @@ export default function Layout() {
             {/**Paso 2.2 */}
             <Header />
             {/**ponemos el main, centramos el contenido  */}
-            <main className='container mx-auto py-16'>
+            <main className='container mx-auto py-32'>
                 {/*
                   *Paso 2,6, ponemos el outlet,inyecta el contenido de index o favoritos
                   *pero nos permiten elementos que son comunes  
                 */}
                 <Outlet />
             </main>
+            <Footer />
         </>
     )
 }

@@ -2,6 +2,7 @@
 import { useMemo } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
+
 //V-308,paso 1.9, creamos el header
 export default function Header() {
     //V-312,paso 4.0,ponemos useLoction para detectar la página actual
@@ -106,5 +107,8 @@ export default function Header() {
                 )}
             </div>
         </header>
+
     )
+
+
 }

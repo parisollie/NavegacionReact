@@ -1,4 +1,3 @@
-
 //paso 1.8 
 export default function IndexPage() {
 
