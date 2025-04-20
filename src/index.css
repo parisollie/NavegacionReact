@@ -1,0 +1,4 @@
+/*Paso 1.1, importamos tailwind*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
