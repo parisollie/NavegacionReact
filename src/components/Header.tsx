@@ -2,9 +2,9 @@
 import { useMemo } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 
-//V-308,paso 1.10, creamos el header
+//V-308,paso 1.9, creamos el header
 export default function Header() {
-    //V-312,paso 4.0,ponemos useLoction para detectar la pagina actual
+    //V-312,paso 4.0,ponemos useLoction para detectar la página actual
     const { pathname } = useLocation()
     console.log(location.pathname)
 
@@ -14,6 +14,7 @@ export default function Header() {
     return (
 
         //Paso 2.0, agregamos el bg-slate-800
+        //Paso 4.4, le ponemos si es home le ponemos la imagen de fondo.
         <header className={isHome ? 'bg-header bg-center bg-cover' : 'bg-slate-800'} >
             {/** Paso 2.1,ponemos la estructura del header */}
             <div className="mx-auto container px-5 py-16">
@@ -50,6 +51,9 @@ export default function Header() {
                 {/**Paso 4.2 */}
                 {isHome && (
                     <form
+                        //Toma un widh de 1 de 2 columnas pero en un tamaño grande 1 de 3 columnas
+                        //m-y, margin y
+                        //p-10,padding de 10
                         className='md:w-1/2 2xl:w-1/3 bg-orange-400 my-32 p-10 rounded-lg shadow space-y-6'
                     >
 
@@ -65,7 +69,9 @@ export default function Header() {
                                 id='ingredient'
                                 type='text'
                                 name='ingredient'
-                                //No resalta nada con esto
+                                /*
+                                P-3 -> Padding de 3 en todas las direcciones
+                                No resalta nada con esto con el focus*/
                                 className='p-3 w-full rounded-lg focus:outline-none'
                                 placeholder='Nombre o Ingrediente. Ej. Vodka, Tequila, Café'
 
